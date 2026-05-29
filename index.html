@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section id="seccion-formulario">
+            <div class="titulo-seccion">
+                <h2>Formulario de Inscripción a un curso </h2>
+            </div>
+
+            <div class="campo">
+                <label for="nombreYapellido">Nombre y Apellido</label>
+                <input type="text" id="nombreYapellido" placeholder="Ej: FedericoGonzalez">
+                <span id="error-nombreYapellido" class="error"></span>
+            </div>
+
+            <div class="campo">
+                <label for="DNI">DNI</label>
+                <input type="text" id="dni" placeholder="EJ: 46123999">
+                <span id="error-dni" class="error"></span>
+            </div>
+
+            <div class="campo">
+                <label for="codigo">Fecha de Nacimiento</label>
+                <input type="date" id="fechaNac">
+                <span id="error-fechaNac" class="error"></span>
+            </div>
+
+            <button onclick="registrarInfo()">Enviar</button>
+            
+        </section>
+
+        <section id="seccion-preguntasProg" style="display: none;">
+            <div class="titulo-seccion">
+                <h2>Preguntas Progresivas:</h2>
+            </div>
+
+            <p class="instruccion">A continuacion se le mostrarán algunas preguntas que debe responder</p>
+            <button onclick="hacerPreguntas()">Preguntas</button>
+            <div id="respuestas"></div>
+
+        </section>
+
+    
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
